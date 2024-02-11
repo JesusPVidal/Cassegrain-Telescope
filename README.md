@@ -1,7 +1,7 @@
 
 Desarrollo del telescopio Cassegrain.
 
-#General
+# General
 
 ## Pendientes
 1. Medir la distancia focal y el diámetro del espejo
