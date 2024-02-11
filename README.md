@@ -1,13 +1,12 @@
-# Mi Proyecto
-
 ## Introducción
-En este proyecto, exploraremos las maravillas del universo.
+Desarrollo del telescopio Cassegrain.
 
-[link](https://github.com/JesusPVidal/MapeoCuentasBP.git)
-
-## Objetivos
-1. Investigar sobre la formación de estrellas.
-2. Estudiar la estructura de las galaxias.
+## Pendientes
+1. Medir la distancia focal y el diámetro del espejo
+2. Calcular el diametro ideal del espejo secundario y el diametro minimo
+3. Calcular las variables
+4. Buscar un espejo convexo con las caracteristicas necesarias
+5. Determinar manufactura del telescopio
 
 ## Métodos
 - Recopilación de datos astronómicos.
