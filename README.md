@@ -33,3 +33,4 @@ Espejo ejemplo encontrado en internet, con el cual hacer los cálculos
 
 ## Boceto
 
+[Contribution guidelines for this project](docs/portfolio.md)
