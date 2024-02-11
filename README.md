@@ -1,6 +1,8 @@
 
 Desarrollo del telescopio Cassegrain.
 
+#General
+
 ## Pendientes
 1. Medir la distancia focal y el diámetro del espejo
 2. Calcular el diametro ideal del espejo secundario y el diametro minimo
@@ -27,4 +29,7 @@ Espejo ejemplo encontrado en internet, con el cual hacer los cálculos
 
 ![Texto alternativo](https://github.com/JesusPVidal/Cassegrain-Telescope/blob/main/EjemploConvexo.png?raw=true)
 
-## Resultados
+# Manufactura
+
+## Boceto
+
