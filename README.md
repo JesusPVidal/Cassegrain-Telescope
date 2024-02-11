@@ -9,7 +9,7 @@ Desarrollo del telescopio Cassegrain.
 5. Determinar manufactura del telescopio
 
 ## Métodos
-![Texto alternativo](URL_de_la_imagen)
+![Texto alternativo](https://github.com/JesusPVidal/Cassegrain-Telescope/blob/main/Imagen%20Principal.png?raw=true)
 - Análisis de imágenes de telescopios.
 
 ## Resultados
