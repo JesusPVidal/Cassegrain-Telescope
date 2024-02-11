@@ -1,4 +1,4 @@
-# Introducción
+
 Desarrollo del telescopio Cassegrain.
 
 ## Pendientes
