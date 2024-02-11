@@ -9,7 +9,7 @@ Desarrollo del telescopio Cassegrain.
 5. Determinar manufactura del telescopio
 
 ## Métodos
-- Recopilación de datos astronómicos.
+![Texto alternativo](URL_de_la_imagen)
 - Análisis de imágenes de telescopios.
 
 ## Resultados
