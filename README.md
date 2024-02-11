@@ -8,9 +8,15 @@ Desarrollo del telescopio Cassegrain.
 4. Buscar un espejo convexo con las caracteristicas necesarias
 5. Determinar manufactura del telescopio
 
-## Métodos
+## Variables por obtener
 ![Texto alternativo](https://github.com/JesusPVidal/Cassegrain-Telescope/blob/main/Imagen%20Principal.png?raw=true)
-- Análisis de imágenes de telescopios.
+- D: Diámetros de cada espejo / Ocular
+- f: Distancia focal del sistema y de cada espejo respectivamente (negativo para f2)
+- d: Separación entre los espejos
+
+## Cálculo del diametro del espejo secundario
+![Texto alternativo]([https://github.com/JesusPVidal/Cassegrain-Telescope/blob/main/Imagen%20Principal.png?raw=true](https://github.com/JesusPVidal/Cassegrain-Telescope/blob/main/Diametros2.png?raw=true))
+Considerar que el diametro 2 debe estar entre este rango.
 
 ## Resultados
 - [Imagen de una galaxia espiral](https://example.com/galaxy_spiral.jpg)
