@@ -16,6 +16,7 @@ Desarrollo del telescopio Cassegrain.
 
 ## Cálculo del diametro del espejo secundario
 ![Texto alternativo](https://github.com/JesusPVidal/Cassegrain-Telescope/blob/main/Diametros2.png?raw=true)
+
 Considerar que el diametro 2 debe estar entre este rango.
 
 ## Resultados
