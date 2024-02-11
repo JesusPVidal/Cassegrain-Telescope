@@ -22,7 +22,6 @@ Considerar que el diametro 2 debe estar entre este rango.
 ### Espejo Secundario Ejemplo (25 y 50 mm)
 
 ![Texto alternativo](https://github.com/JesusPVidal/Cassegrain-Telescope/blob/main/EjemploConvexo.png?raw=true)
+[Página con Espejos](URL_del_enlace)
 
 ## Resultados
-- [Imagen de una galaxia espiral](https://example.com/galaxy_spiral.jpg)
-- [Imagen de una supernova](https://example.com/supernova.jpg)
