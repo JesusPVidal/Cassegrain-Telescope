@@ -15,13 +15,15 @@ Desarrollo del telescopio Cassegrain.
 - d: Separación entre los espejos
 
 ## Cálculo del diametro del espejo secundario
-![Texto alternativo](https://github.com/JesusPVidal/Cassegrain-Telescope/blob/main/Diametros2.png?raw=true)
 
 Considerar que el diametro 2 debe estar entre este rango.
 
-### Espejo Secundario Ejemplo (25 y 50 mm)
+![Texto alternativo](https://github.com/JesusPVidal/Cassegrain-Telescope/blob/main/Diametros2.png?raw=true)
 
-![Texto alternativo](https://github.com/JesusPVidal/Cassegrain-Telescope/blob/main/EjemploConvexo.png?raw=true)
+## Espejo Secundario Ejemplo (25 y 50 mm)
+Espejo ejemplo encontrado en internet, con el cual hacer los cálculos
+
 [Página con Espejos](URL_del_enlace)
+![Texto alternativo](https://github.com/JesusPVidal/Cassegrain-Telescope/blob/main/EjemploConvexo.png?raw=true)
 
 ## Resultados
