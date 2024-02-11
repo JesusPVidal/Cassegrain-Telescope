@@ -9,7 +9,7 @@ Desarrollo del telescopio Cassegrain.
 5. Determinar manufactura del telescopio
 
 ## Variables por obtener
-![Texto alternativo](https://github.com/JesusPVidal/Cassegrain-Telescope/blob/main/Imagen%20Principal.png?raw=true)
+![Texto alternativo](https://github.com/JesusPVidal/Cassegrain-Telescope/blob/main/ImagenPrincipal.png?raw=true)
 - D: Diámetros de cada espejo / Ocular
 - f: Distancia focal del sistema y de cada espejo respectivamente (negativo para f2)
 - d: Separación entre los espejos
