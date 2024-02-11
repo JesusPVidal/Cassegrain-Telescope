@@ -4,14 +4,12 @@ Desarrollo del telescopio Cassegrain.
 # General
 
 ## Pendientes
-- [x] Desarrollar página del proyecto
-- [ ] Medir la distancia focal y el diámetro del espejo
-- [ ] Calcular el diametro ideal del espejo secundario y el diametro minimo
-- [ ] Calcular las variables
-- [ ] Buscar un espejo convexo con las caracteristicas necesarias
-- [ ] Determinar manufactura del telescopio
-- [ ] Añadir imágenes en la parte de manufactura
-- [ ] Tener algo decente para presentar
+1. Medir la distancia focal y el diámetro del espejo
+2. Calcular el diametro ideal del espejo secundario y el diametro minimo
+3. Calcular las variables
+4. Buscar un espejo convexo con las caracteristicas necesarias
+5. Determinar manufactura del telescopio
+6. Añadir imágenes en la parte de manufactura
 
 ## Variables por obtener
 ![Texto alternativo](https://github.com/JesusPVidal/Cassegrain-Telescope/blob/main/ImagenPrincipal.png?raw=true)
@@ -39,4 +37,6 @@ Espejo ejemplo encontrado en internet, con el cual hacer los cálculos
 [URLs de Interés](portfolio.md)
 
 
+- [x] Desarrollar página del proyecto
+- [ ] Tener algo decente para presentar
 
