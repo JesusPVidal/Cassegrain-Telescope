@@ -34,3 +34,8 @@ Espejo ejemplo encontrado en internet, con el cual hacer los cálculos
 ## Boceto
 
 [URLs de Interés](portfolio.md)
+
+- [x] Desarrollar página del proyecto
+- [ ] Añadir imágenes en la parte de manufactura
+- [ ] Tener algo decente para presentar :tada:
+
