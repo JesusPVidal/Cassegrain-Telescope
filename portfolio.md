@@ -6,4 +6,4 @@ URLs de interés
 
 [Paper Franco Manufactura Newtoniano](https://onedrive.live.com/?authkey=%21AB3fas1aea7N3bI&id=926616B8365EF355%2128099&cid=926616B8365EF355&parId=root&parQt=sharedbyme&parCid=A96A83C9C27EBFE0&o=OneUp)
 
-[Calculadora](Calculador.html)
+[Calculadora](Calculadora.html)
