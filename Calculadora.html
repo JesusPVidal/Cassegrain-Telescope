@@ -3,80 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora</title>
+    <title>Calculadora de Telescopio Cassegrain</title>
     <style>
+        /* Estilos CSS pueden ser agregados aquí */
         body {
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
         }
-        .calculator {
-            width: 300px;
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        form {
+            max-width: 600px;
             margin: 0 auto;
             padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
             border: 1px solid #ccc;
             border-radius: 5px;
+            box-sizing: border-box;
         }
-        input[type="text"] {
-            width: calc(100% - 10px);
-            margin-bottom: 10px;
-            padding: 5px;
-        }
-        input[type="button"] {
-            width: 50px;
-            height: 50px;
-            font-size: 20px;
-            margin: 5px;
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
-    <div class="calculator">
-        <input type="text" id="display" readonly>
-        <div>
-            <input type="button" value="7" onclick="addToDisplay('7')">
-            <input type="button" value="8" onclick="addToDisplay('8')">
-            <input type="button" value="9" onclick="addToDisplay('9')">
-            <input type="button" value="+" onclick="addToDisplay('+')">
-        </div>
-        <div>
-            <input type="button" value="4" onclick="addToDisplay('4')">
-            <input type="button" value="5" onclick="addToDisplay('5')">
-            <input type="button" value="6" onclick="addToDisplay('6')">
-            <input type="button" value="-" onclick="addToDisplay('-')">
-        </div>
-        <div>
-            <input type="button" value="1" onclick="addToDisplay('1')">
-            <input type="button" value="2" onclick="addToDisplay('2')">
-            <input type="button" value="3" onclick="addToDisplay('3')">
-            <input type="button" value="*" onclick="addToDisplay('*')">
-        </div>
-        <div>
-            <input type="button" value="0" onclick="addToDisplay('0')">
-            <input type="button" value="." onclick="addToDisplay('.')">
-            <input type="button" value="=" onclick="calculate()">
-            <input type="button" value="/" onclick="addToDisplay('/')">
-        </div>
-        <div>
-            <input type="button" value="C" onclick="clearDisplay()">
-        </div>
-    </div>
+    <header>
+        <h1>Calculadora de Telescopio Cassegrain</h1>
+    </header>
+
+    <form id="calculatorForm">
+        <label for="diametroPrimario">Diámetro del Espejo Primario (mm):</label>
+        <input type="number" id="diametroPrimario" name="diametroPrimario" required>
+
+        <label for="distanciaFocalPrimaria">Distancia Focal del Espejo Primario (mm):</label>
+        <input type="number" id="distanciaFocalPrimaria" name="distanciaFocalPrimaria" required>
+
+        <label for="distanciaFocalSecundaria">Distancia Focal del Espejo Secundario (mm):</label>
+        <input type="number" id="distanciaFocalSecundaria" name="distanciaFocalSecundaria" required>
+
+        <input type="submit" value="Calcular">
+    </form>
+
+    <div id="result"></div>
 
     <script>
-        function addToDisplay(value) {
-            document.getElementById('display').value += value;
-        }
+        document.getElementById('calculatorForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita que se recargue la página al enviar el formulario
 
-        function calculate() {
-            try {
-                var result = eval(document.getElementById('display').value);
-                document.getElementById('display').value = result;
-            } catch (error) {
-                document.getElementById('display').value = 'Error';
-            }
-        }
+            // Obtener los valores del formulario
+            var diametroPrimario = parseFloat(document.getElementById('diametroPrimario').value);
+            var distanciaFocalPrimaria = parseFloat(document.getElementById('distanciaFocalPrimaria').value);
+            var distanciaFocalSecundaria = parseFloat(document.getElementById('distanciaFocalSecundaria').value);
 
-        function clearDisplay() {
-            document.getElementById('display').value = '';
-        }
+            // Realizar cálculos
+            var aumento = distanciaFocalPrimaria / distanciaFocalSecundaria;
+            var resolucion = 116 / diametroPrimario;
+
+            // Mostrar resultados
+            var resultContainer = document.getElementById('result');
+            resultContainer.innerHTML = `
+                <h2>Resultados:</h2>
+                <p>Aumento: ${aumento.toFixed(2)}</p>
+                <p>Resolución (arcosegundos): ${resolucion.toFixed(2)}</p>
+            `;
+        });
     </script>
 </body>
 </html>
