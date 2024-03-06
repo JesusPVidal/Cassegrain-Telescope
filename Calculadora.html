@@ -49,7 +49,7 @@
 </head>
 <body>
     <header>
-        <h1>Calculadora de Telescopio Cassegrain</h1>
+        <h1>Calculadora de Telescopio Cassegrain RC</h1>
     </header>
 
     <form id="calculatorForm">
@@ -59,8 +59,11 @@
         <label for="distanciaFocalPrimaria">Distancia Focal del Espejo Primario (mm):</label>
         <input type="number" id="distanciaFocalPrimaria" name="distanciaFocalPrimaria" required>
 
-        <label for="distanciaFocalSecundaria">Distancia Focal del Espejo Secundario (mm):</label>
-        <input type="number" id="distanciaFocalSecundaria" name="distanciaFocalSecundaria" required>
+        <label for="distanciaFocalTelescopio">Distancia Focal Efectiva del Telescopio (mm):</label>
+        <input type="number" id="distanciaFocalTelescopio" name="distanciaFocalTelescopio" required>
+
+        <label for="distanciaAperturaFoco">Distancia de la Apertura al Foco (mm):</label>
+        <input type="number" id="distanciaAperturaFoco" name="distanciaAperturaFoco" required>
 
         <input type="submit" value="Calcular">
     </form>
@@ -74,18 +77,62 @@
             // Obtener los valores del formulario
             var diametroPrimario = parseFloat(document.getElementById('diametroPrimario').value);
             var distanciaFocalPrimaria = parseFloat(document.getElementById('distanciaFocalPrimaria').value);
-            var distanciaFocalSecundaria = parseFloat(document.getElementById('distanciaFocalSecundaria').value);
-
+            var distanciaFocalTelescopio = parseFloat(document.getElementById('distanciaFocalTelescopio').value);
+            var distanciaAperturaFoco = parseFloat(document.getElementById('distanciaAperturaFoco').value);
+           
             // Realizar cálculos
-            var aumento = distanciaFocalPrimaria / distanciaFocalSecundaria;
             var resolucion = 116 / diametroPrimario;
+
+            /// Magnitudes sin dimensión
+            var M = distanciaFocalTelescopio / distanciaFocalPrimaria;
+            var B = distanciaAperturaFoco / distanciaFocalTelescopio;
+            var E = distanciaAperturaFoco / distanciaFocalPrimaria;
+
+            var R = (M - E)/(M + 1);
+            var T = (1 + E)/(M + 1);
+            var S = M * (1 -R)/(M - 1);
+
+            var alpha = ((M + 1)/(M - 1))**2;
+            var beta = (1 - R) * ((M - 1)/M)**3;  
+            var gamma = R * ((M - 1)/M)**3;
+            var delta = 2 / M**2;
+
+            /// Calculando medidas
+            var f2 = S * distanciaFocalPrimaria;
+            var D2 = T * diametroPrimario;
+            var d = R * distanciaFocalPrimaria;
+
+            /// Calculando SC de los espejos
+            var SC1 = -(1 + beta * delta / gamma);
+            var SC2 = -(alpha + delta/gamma);
 
             // Mostrar resultados
             var resultContainer = document.getElementById('result');
             resultContainer.innerHTML = `
+                <br>
                 <h2>Resultados:</h2>
-                <p>Aumento: ${aumento.toFixed(2)}</p>
-                <p>Resolución (arcosegundos): ${resolucion.toFixed(2)}</p>
+                <hr>
+                <h3>Magnitudes del telescopio</h3>
+                <br>
+                <ul>
+                    <li>Magnificación secundaria:  ${M.toFixed(2)}</li>
+                    <li>Resolución (arcosegundos): ${resolucion.toFixed(2)}</li>
+                </ul>
+                <hr>
+                <h3>Medidas del telescopio</h3>
+                <br>
+                <ul>
+                    <li>Diámetro del espejo secundario (mm):         ${D2.toFixed(2)}</li>
+                    <li>Distancia focal del espejo secundario (mm):  ${f2.toFixed(2)}</li>
+                    <li>Distancia entre espejos (mm):                ${d.toFixed(2)}</li>
+                </ul>
+                <hr>
+                <h3>Constantes de Schwarzschild</h3>
+                <br>
+                <ul>
+                    <li>Espejo primario:   ${SC1.toFixed(2)}</li>
+                    <li>Espejo secundario: ${SC2.toFixed(2)}</li>
+                </ul>
             `;
         });
     </script>
